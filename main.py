@@ -21,27 +21,45 @@ while True:
     print("3. Sort by Z-A")
     print("4. Search by name")
     print("5. Search by length of name")
-    print("6. Exit")
-
-    choice = input("Enter your choice (1-6): ")
+    print("6. Print 10 pokemns")
+    print("7. Exit")
+    
+    choice = input("Enter your choice (1-7): ")
 
     if choice == '1':
-        # https://www.w3schools.com/python/python_lists_access.asp
+        number = input("Choose a sequential number:")
+        print(pokemons[int(number)])
         pass
     elif choice == '2':
-        # https://www.w3schools.com/python/python_lists_sort.asp
+        pokemons.sort()
+        print(pokemons)
         pass
     elif choice == '3':
-        # https://www.w3schools.com/python/python_lists_sort.asp
+        pokemons.sort(reverse = True)
+        print(pokemons)
         pass
     elif choice == '4':
-        # https://www.w3schools.com/python/python_lists_comprehension.asp
-        # https://www.w3schools.com/python/ref_string_startswith.asp
+        name = input('Find:')
+        newpokemons = []
+        for x in pokemons:
+            if x.startswith(name) == True:
+                newpokemons.append(x)
+        print(newpokemons)   
         pass
     elif choice == '5':
-        # https://www.w3schools.com/python/python_lists_comprehension.asp
+        length = input('Find:')
+        newpoki = []
+        for x in pokemons:
+            if int(length) == len(x):
+                newpoki.append(x)
+        print(newpoki)
         pass
     elif choice == '6':
+        pokipoki = len(pokemons)
+        for x in pokipoki:
+            if x < 10:
+    
+    elif choice == '7':
         print("Exiting")
         break
     else:
