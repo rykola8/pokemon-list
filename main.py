@@ -23,7 +23,6 @@ while True:
     print("5. Search by length of name")
     print("6. Print 10 pokemns")
     print("7. Exit")
-    
     choice = input("Enter your choice (1-7): ")
 
     if choice == '1':
@@ -55,10 +54,16 @@ while True:
         print(newpoki)
         pass
     elif choice == '6':
-        pokipoki = len(pokemons)
-        for x in pokipoki:
-            if x < 10:
-    
+        s = 10
+        print(pokemons[:s])
+        while True:
+            choice = input("next:")
+            if choice == "next":
+                s = s + 10 
+                e = s + 10
+                print(pokemons[s:e])
+    if choice != next:
+        break
     elif choice == '7':
         print("Exiting")
         break
